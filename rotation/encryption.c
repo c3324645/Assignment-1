@@ -9,7 +9,7 @@
 int main(void)
 {
     //declare variables
-    int key
-    char 
+    int key, i;
+    char message[100];
     printf("hello, world\n");
 }
