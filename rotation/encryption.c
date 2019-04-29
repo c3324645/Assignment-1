@@ -35,7 +35,7 @@ void caesar_cipher_encryption() //function to encyrpt text
                   }
                   data[count] = temp;
             }
-            else if(temp >= 'A' && temp <= 'Z')
+            else if(temp >= 'A' && temp <= 'Z') // else if statement for uppercase letters
             {
                   temp = temp + key;
                   if(temp > 'Z')
@@ -55,21 +55,21 @@ void caesar_cipher_decryption() //function to decrypt text
             temp = data[count];
             if(temp >= 'a' && temp <= 'z')
             {
-                  temp = temp - key;
+                  temp = temp - key; //the temp becomes the last value of temp minus the key to decrypt the text 
                   if(temp < 'a')
                   {
                         temp = temp + 'z' - 'a' + 1;
-                  }
+                  } //ending bracket for the if statement for temp < 'a'
                   data[count] = temp;
             }
-            else if(temp >= 'A' && temp <= 'Z')
+            else if(temp >= 'A' && temp <= 'Z') //elseif statement to decrypt uppercase letters
             {
-                  temp = temp - key;
+                  temp = temp - key; 
                   if(temp < 'A')
                   {
                         temp = temp + 'Z' - 'A' + 1;
                   }
-                  data[count] = temp;
+                  data[count] = temp; //data becomes the value for temp
             }
       }
       printf("\nDecrypted Message:\t%s\n", data);
@@ -98,4 +98,3 @@ int main()
       printf("\n"); //print the output on a new line
       return 0;
 }
-
