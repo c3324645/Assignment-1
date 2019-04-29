@@ -11,13 +11,13 @@ int key, count;
 
 void getmessage() //function to read the message to be encrypted or decrypted
 {	
-      printf("Enter a String:\t"); //printf statement for user input
+      printf("Please Enter a Message:\t"); //printf statement for user input, \t provides a tab space
       scanf("%[^\n]s", data); //scanf statement to read user input
 }
 
 void key_input() //function that allows the user to input the key (the amount the letters are shifted) for the cipher
 {
-      printf("Enter a Key:\t");
+      printf("Please Enter a Key:\t");
       scanf("%d", &key);
 }
 
@@ -81,10 +81,10 @@ int main()
       getmessage(); // calls for the getmessage function which takes the users input
       key_input(); // calls for the key input function
       while(1)
-      {
+      { //opening bracket for the while loop
             printf("\n1. Encryption\n2. Decryption\n3. Exit\n");
             printf("\nEnter You Choice:\t");
-            scanf("%d", &choice); //scanf statement reads the users decision and makes that the value of choice
+            scanf("%d", &choice); //scanf statement reads the users decision and stores that in choice
             switch(choice) //switch statement which based on the user's input will encrypt, decrypt, exit the program or print an error message
             {
                   case 1: caesar_cipher_encryption();
@@ -92,9 +92,9 @@ int main()
                   case 2: caesar_cipher_decryption();
                           break;
                   case 3: exit(0);
-                  default: printf("\nPlease select a correct option:\n");
+                  default: printf("\nPlease select a correct option:\n"); //defult case for if the user fails to input one of the given options to encrypt, decrypt or exit the program
             }
-      }
+      } //closing bracket for the while loop
       printf("\n"); //print the output on a new line
       return 0;
 }
