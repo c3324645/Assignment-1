@@ -72,7 +72,7 @@ void caesar_cipher_decryption() //function to decrypt text
                   data[count] = temp; //data becomes the value for temp
             }
       }
-      printf("\nDecrypted Message:\t%s\n", data);
+      printf("\nDecrypted Message:\t%s\n", data);//printf statement to print the decrypted message, the output comes from the data on line 72
 }
 
 int main()
@@ -86,14 +86,14 @@ int main()
             printf("\nEnter You Choice:\t");
             scanf("%d", &choice); //scanf statement reads the users decision and stores that in choice
             switch(choice) //switch statement which based on the user's input will encrypt, decrypt, exit the program or print an error message
-            {
+            { //opening bracket for switch statement
                   case 1: caesar_cipher_encryption();
-                          break; 
+                          break; //break to break the switch statement if condition is met
                   case 2: caesar_cipher_decryption();
                           break;
                   case 3: exit(0);
                   default: printf("\nPlease select a correct option:\n"); //defult case for if the user fails to input one of the given options to encrypt, decrypt or exit the program
-            }
+            } //closing bracket for switch statement
       } //closing bracket for the while loop
       printf("\n"); //print the output on a new line
       return 0;
